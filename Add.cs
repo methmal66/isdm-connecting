@@ -19,6 +19,15 @@ namespace isdm_connecting
             InitializeComponent();
         }
 
+        private void clearForm()
+        {
+            this.idField.Text = "";
+            this.nameField.Text = "";
+            this.ageField.Text = "";
+            this.gpaField.Text = "";
+            this.addressField.Text = "";
+        }
+
         private void Add_Load(object sender, EventArgs e)
         {
             DB db = new DB();
@@ -44,6 +53,7 @@ namespace isdm_connecting
                 string caption = "Add new student";
                 MessageBoxIcon icon = MessageBoxIcon.Information;
                 MessageBox.Show(message, caption, MessageBoxButtons.OK, icon);
+                clearForm();
             }
             else
             {
