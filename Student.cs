@@ -20,13 +20,16 @@ namespace isdm_connecting
         public Student setGpa(float _gpa) { gpa = _gpa; return this; }
         public Student setAddress(string _address) { address = _address; return this; }
 
-        public bool addToDatabase()
+        public bool insert()
         {
-            DB db = new DB();
-            string sql = "insert into Student values ("+id+", '"+name+"', "+age+", "+gpa+", '"+address+"')";
-            return db.execute(sql);
+            string query = "insert into Student values ("+id+", '"+name+"', "+age+", "+gpa+", '"+address+"')";
+            return new DB().execute(query);
         }
 
-    
+        public static bool delete(int _id)
+        {
+            string query = "delete from Student where ID=" + _id;
+            return new DB().execute(query);
+        }
     }
 }
