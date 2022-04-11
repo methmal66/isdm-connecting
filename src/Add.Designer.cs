@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.ageField = new System.Windows.Forms.NumericUpDown();
             this.addressField = new System.Windows.Forms.TextBox();
             this.gpaField = new System.Windows.Forms.TextBox();
             this.nameField = new System.Windows.Forms.TextBox();
@@ -42,10 +43,9 @@
             this.Clear = new System.Windows.Forms.Button();
             this.dataGridView = new System.Windows.Forms.DataGridView();
             this.removeBtn = new System.Windows.Forms.Button();
-            this.ageField = new System.Windows.Forms.NumericUpDown();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ageField)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -68,6 +68,18 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Student details";
+            // 
+            // ageField
+            // 
+            this.ageField.Location = new System.Drawing.Point(60, 71);
+            this.ageField.Name = "ageField";
+            this.ageField.Size = new System.Drawing.Size(229, 20);
+            this.ageField.TabIndex = 5;
+            this.ageField.Value = new decimal(new int[] {
+            21,
+            0,
+            0,
+            0});
             // 
             // addressField
             // 
@@ -180,35 +192,25 @@
             this.removeBtn.UseVisualStyleBackColor = true;
             this.removeBtn.Click += new System.EventHandler(this.removeBtn_Click);
             // 
-            // ageField
-            // 
-            this.ageField.Location = new System.Drawing.Point(60, 71);
-            this.ageField.Name = "ageField";
-            this.ageField.Size = new System.Drawing.Size(229, 20);
-            this.ageField.TabIndex = 5;
-            this.ageField.Value = new decimal(new int[] {
-            21,
-            0,
-            0,
-            0});
-            // 
             // Add
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(569, 494);
+            this.ClientSize = new System.Drawing.Size(567, 494);
             this.Controls.Add(this.removeBtn);
             this.Controls.Add(this.dataGridView);
             this.Controls.Add(this.Clear);
             this.Controls.Add(this.submitBtn);
             this.Controls.Add(this.groupBox1);
+            this.MaximumSize = new System.Drawing.Size(583, 533);
+            this.MinimumSize = new System.Drawing.Size(583, 533);
             this.Name = "Add";
             this.Text = "Add new Student";
             this.Load += new System.EventHandler(this.Add_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ageField)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
             this.ResumeLayout(false);
 
         }

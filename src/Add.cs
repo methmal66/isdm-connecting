@@ -15,6 +15,7 @@ namespace isdm_connecting
     {
         public Add()
         {
+            this.StartPosition = FormStartPosition.CenterScreen;
             InitializeComponent();
         }
 
