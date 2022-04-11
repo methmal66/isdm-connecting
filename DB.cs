@@ -19,17 +19,16 @@ namespace isdm_connecting
             con = new SqlConnection(conString);
         }
 
-        public void close()
-        {
-            con.Close();
-        }
-
         public bool execute(string sql)
         {
             con.Open();
             SqlCommand cmd = new SqlCommand(sql, con);
             if (cmd.ExecuteNonQuery() == 1)
+            {
+                con.Close();
                 return true;
+            }
+            con.Close();
             return false;
         }
 
@@ -39,6 +38,7 @@ namespace isdm_connecting
             SqlCommandBuilder builder = new SqlCommandBuilder(adapter);
             DataTable table = new DataTable();
             adapter.Fill(table);
+            con.Close();
             return table;
         }
     }
