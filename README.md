@@ -1,5 +1,9 @@
 # isdm-connecting
-Source code for isdm labsheet 10. A simple form demonstrating the sql server connection to C#
+Source code for isdm labsheet 10. A simple form demonstrating the sql server connection to .NET front end.
+[Find this project in GitHub](https://github.com/methmal66/isdm-connecting)
+
+![forks](https://img.shields.io/github/forks/methmal66/isdm-connecting?style=plastic)
+![stars](https://img.shields.io/github/stars/methmal66/isdm-connecting?color=yellow&style=plastic)
 
 ## Features
 - Show all the students in the DB
