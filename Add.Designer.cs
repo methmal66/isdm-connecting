@@ -31,7 +31,6 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.addressField = new System.Windows.Forms.TextBox();
             this.gpaField = new System.Windows.Forms.TextBox();
-            this.ageField = new System.Windows.Forms.TextBox();
             this.nameField = new System.Windows.Forms.TextBox();
             this.idField = new System.Windows.Forms.TextBox();
             this.Address = new System.Windows.Forms.Label();
@@ -43,16 +42,18 @@
             this.Clear = new System.Windows.Forms.Button();
             this.dataGridView = new System.Windows.Forms.DataGridView();
             this.removeBtn = new System.Windows.Forms.Button();
+            this.ageField = new System.Windows.Forms.NumericUpDown();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ageField)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.SystemColors.Control;
+            this.groupBox1.Controls.Add(this.ageField);
             this.groupBox1.Controls.Add(this.addressField);
             this.groupBox1.Controls.Add(this.gpaField);
-            this.groupBox1.Controls.Add(this.ageField);
             this.groupBox1.Controls.Add(this.nameField);
             this.groupBox1.Controls.Add(this.idField);
             this.groupBox1.Controls.Add(this.Address);
@@ -81,13 +82,6 @@
             this.gpaField.Name = "gpaField";
             this.gpaField.Size = new System.Drawing.Size(229, 20);
             this.gpaField.TabIndex = 8;
-            // 
-            // ageField
-            // 
-            this.ageField.Location = new System.Drawing.Point(60, 70);
-            this.ageField.Name = "ageField";
-            this.ageField.Size = new System.Drawing.Size(229, 20);
-            this.ageField.TabIndex = 7;
             // 
             // nameField
             // 
@@ -186,6 +180,18 @@
             this.removeBtn.UseVisualStyleBackColor = true;
             this.removeBtn.Click += new System.EventHandler(this.removeBtn_Click);
             // 
+            // ageField
+            // 
+            this.ageField.Location = new System.Drawing.Point(60, 71);
+            this.ageField.Name = "ageField";
+            this.ageField.Size = new System.Drawing.Size(229, 20);
+            this.ageField.TabIndex = 5;
+            this.ageField.Value = new decimal(new int[] {
+            21,
+            0,
+            0,
+            0});
+            // 
             // Add
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -202,6 +208,7 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ageField)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -211,7 +218,6 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.TextBox addressField;
         private System.Windows.Forms.TextBox gpaField;
-        private System.Windows.Forms.TextBox ageField;
         private System.Windows.Forms.TextBox nameField;
         private System.Windows.Forms.TextBox idField;
         private System.Windows.Forms.Label Address;
@@ -223,6 +229,7 @@
         private System.Windows.Forms.Button Clear;
         private System.Windows.Forms.DataGridView dataGridView;
         private System.Windows.Forms.Button removeBtn;
+        private System.Windows.Forms.NumericUpDown ageField;
     }
 }
 
