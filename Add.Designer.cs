@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.Age = new System.Windows.Forms.TextBox();
-            this.Name = new System.Windows.Forms.TextBox();
-            this.ID = new System.Windows.Forms.TextBox();
+            this.addressField = new System.Windows.Forms.TextBox();
+            this.gpaField = new System.Windows.Forms.TextBox();
+            this.ageField = new System.Windows.Forms.TextBox();
+            this.nameField = new System.Windows.Forms.TextBox();
+            this.idField = new System.Windows.Forms.TextBox();
             this.Address = new System.Windows.Forms.Label();
             this.GPA = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -49,11 +49,11 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.SystemColors.Control;
-            this.groupBox1.Controls.Add(this.textBox2);
-            this.groupBox1.Controls.Add(this.textBox1);
-            this.groupBox1.Controls.Add(this.Age);
-            this.groupBox1.Controls.Add(this.Name);
-            this.groupBox1.Controls.Add(this.ID);
+            this.groupBox1.Controls.Add(this.addressField);
+            this.groupBox1.Controls.Add(this.gpaField);
+            this.groupBox1.Controls.Add(this.ageField);
+            this.groupBox1.Controls.Add(this.nameField);
+            this.groupBox1.Controls.Add(this.idField);
             this.groupBox1.Controls.Add(this.Address);
             this.groupBox1.Controls.Add(this.GPA);
             this.groupBox1.Controls.Add(this.label3);
@@ -67,40 +67,40 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Student details";
             // 
-            // textBox2
+            // addressField
             // 
-            this.textBox2.Location = new System.Drawing.Point(60, 126);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(229, 20);
-            this.textBox2.TabIndex = 9;
+            this.addressField.Location = new System.Drawing.Point(60, 126);
+            this.addressField.Name = "addressField";
+            this.addressField.Size = new System.Drawing.Size(229, 20);
+            this.addressField.TabIndex = 9;
             // 
-            // textBox1
+            // gpaField
             // 
-            this.textBox1.Location = new System.Drawing.Point(60, 97);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(229, 20);
-            this.textBox1.TabIndex = 8;
+            this.gpaField.Location = new System.Drawing.Point(60, 97);
+            this.gpaField.Name = "gpaField";
+            this.gpaField.Size = new System.Drawing.Size(229, 20);
+            this.gpaField.TabIndex = 8;
             // 
-            // Age
+            // ageField
             // 
-            this.Age.Location = new System.Drawing.Point(60, 70);
-            this.Age.Name = "Age";
-            this.Age.Size = new System.Drawing.Size(229, 20);
-            this.Age.TabIndex = 7;
+            this.ageField.Location = new System.Drawing.Point(60, 70);
+            this.ageField.Name = "ageField";
+            this.ageField.Size = new System.Drawing.Size(229, 20);
+            this.ageField.TabIndex = 7;
             // 
-            // Name
+            // nameField
             // 
-            this.Name.Location = new System.Drawing.Point(60, 43);
-            this.Name.Name = "Name";
-            this.Name.Size = new System.Drawing.Size(229, 20);
-            this.Name.TabIndex = 6;
+            this.nameField.Location = new System.Drawing.Point(60, 43);
+            this.nameField.Name = "nameField";
+            this.nameField.Size = new System.Drawing.Size(229, 20);
+            this.nameField.TabIndex = 6;
             // 
-            // ID
+            // idField
             // 
-            this.ID.Location = new System.Drawing.Point(60, 17);
-            this.ID.Name = "ID";
-            this.ID.Size = new System.Drawing.Size(229, 20);
-            this.ID.TabIndex = 5;
+            this.idField.Location = new System.Drawing.Point(60, 17);
+            this.idField.Name = "idField";
+            this.idField.Size = new System.Drawing.Size(229, 20);
+            this.idField.TabIndex = 5;
             // 
             // Address
             // 
@@ -155,6 +155,7 @@
             this.submitBtn.TabIndex = 1;
             this.submitBtn.Text = "Submit";
             this.submitBtn.UseVisualStyleBackColor = true;
+            this.submitBtn.Click += new System.EventHandler(this.submitBtn_Click);
             // 
             // Clear
             // 
@@ -168,20 +169,21 @@
             // dataGridView
             // 
             this.dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView.Location = new System.Drawing.Point(33, 211);
+            this.dataGridView.Location = new System.Drawing.Point(12, 211);
             this.dataGridView.Name = "dataGridView";
-            this.dataGridView.Size = new System.Drawing.Size(240, 150);
+            this.dataGridView.Size = new System.Drawing.Size(543, 271);
             this.dataGridView.TabIndex = 3;
             // 
             // Add
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(530, 494);
+            this.ClientSize = new System.Drawing.Size(569, 494);
             this.Controls.Add(this.dataGridView);
             this.Controls.Add(this.Clear);
             this.Controls.Add(this.submitBtn);
             this.Controls.Add(this.groupBox1);
+            this.Name = "Add";
             this.Text = "Add new Student";
             this.Load += new System.EventHandler(this.Add_Load);
             this.groupBox1.ResumeLayout(false);
@@ -194,11 +196,11 @@
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox Age;
-        private System.Windows.Forms.TextBox Name;
-        private System.Windows.Forms.TextBox ID;
+        private System.Windows.Forms.TextBox addressField;
+        private System.Windows.Forms.TextBox gpaField;
+        private System.Windows.Forms.TextBox ageField;
+        private System.Windows.Forms.TextBox nameField;
+        private System.Windows.Forms.TextBox idField;
         private System.Windows.Forms.Label Address;
         private System.Windows.Forms.Label GPA;
         private System.Windows.Forms.Label label3;
