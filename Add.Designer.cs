@@ -42,6 +42,7 @@
             this.submitBtn = new System.Windows.Forms.Button();
             this.Clear = new System.Windows.Forms.Button();
             this.dataGridView = new System.Windows.Forms.DataGridView();
+            this.removeBtn = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
             this.SuspendLayout();
@@ -149,7 +150,7 @@
             // 
             // submitBtn
             // 
-            this.submitBtn.Location = new System.Drawing.Point(225, 182);
+            this.submitBtn.Location = new System.Drawing.Point(247, 182);
             this.submitBtn.Name = "submitBtn";
             this.submitBtn.Size = new System.Drawing.Size(75, 23);
             this.submitBtn.TabIndex = 1;
@@ -159,12 +160,13 @@
             // 
             // Clear
             // 
-            this.Clear.Location = new System.Drawing.Point(144, 181);
+            this.Clear.Location = new System.Drawing.Point(166, 182);
             this.Clear.Name = "Clear";
             this.Clear.Size = new System.Drawing.Size(75, 23);
             this.Clear.TabIndex = 2;
             this.Clear.Text = "Clear";
             this.Clear.UseVisualStyleBackColor = true;
+            this.Clear.Click += new System.EventHandler(this.Clear_Click);
             // 
             // dataGridView
             // 
@@ -174,11 +176,22 @@
             this.dataGridView.Size = new System.Drawing.Size(543, 271);
             this.dataGridView.TabIndex = 3;
             // 
+            // removeBtn
+            // 
+            this.removeBtn.Location = new System.Drawing.Point(85, 182);
+            this.removeBtn.Name = "removeBtn";
+            this.removeBtn.Size = new System.Drawing.Size(75, 23);
+            this.removeBtn.TabIndex = 4;
+            this.removeBtn.Text = "Remove";
+            this.removeBtn.UseVisualStyleBackColor = true;
+            this.removeBtn.Click += new System.EventHandler(this.removeBtn_Click);
+            // 
             // Add
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(569, 494);
+            this.Controls.Add(this.removeBtn);
             this.Controls.Add(this.dataGridView);
             this.Controls.Add(this.Clear);
             this.Controls.Add(this.submitBtn);
@@ -209,6 +222,7 @@
         private System.Windows.Forms.Button submitBtn;
         private System.Windows.Forms.Button Clear;
         private System.Windows.Forms.DataGridView dataGridView;
+        private System.Windows.Forms.Button removeBtn;
     }
 }
 
